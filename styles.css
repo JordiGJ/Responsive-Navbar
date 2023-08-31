@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: #dfdfdf;
+  font-family: sans-serif;
+}
+nav {
+  box-shadow: 0 2px 4px #afafaf;
+}
+.nav-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #fff;
+}
+h3 {
+  color: red;
+  font-size: 1.5rem;
+}
+i {
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.list {
+  height: 0;
+  background-color: white;
+  list-style: none;
+}
+.flex {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  margin-left: 3rem;
+  color: grey;
+}
+.nav-header ul {
+  height: fit-content;
+}
+.nav-header a:hover {
+  color: red;
+}
+.hidden {
+  display: none;
+}
+.shown {
+  overflow: hidden;
+  transition: height 0.3s ease-in;
+}
+.shown a {
+  font-size: 1rem;
+  transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding-left: 0;
+  padding-right: 100%;
+}
+.shown li {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.shown a:hover {
+  color: red;
+  background-color: pink;
+  padding: 1rem;
+  padding-right: 100%;
+}
+.showHeight {
+  height: 150px;
+}
+
+@media (width < 800px) {
+  .nav-header i {
+    display: unset;
+  }
+}
+@media (width >= 800px) {
+  .nav-header i {
+    display: none;
+  }
+  .shown {
+    display: none;
+  }
+  .nav-header ul {
+    display: flex;
+  }
+}
